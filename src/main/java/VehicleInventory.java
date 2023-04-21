@@ -13,12 +13,15 @@ public class VehicleInventory {
 
         Vehicle[] cars = new Vehicle[20];
 
-        cars[1] = Porsche;
-        cars[2] = Tesla;
-        cars[3] = BMW;
-        cars[4] = RangeRover;
-        cars[5] = AstonMartin;
-        cars[6] = Mercedes;
+        cars[0] = Porsche;
+        cars[1] = Tesla;
+        cars[2] = BMW;
+        cars[3] = RangeRover;
+        cars[4] = AstonMartin;
+        cars[5] = Mercedes;
+
+        boolean exit = false;
+        while (!exit) {
 
 
         System.out.println("What do you want to do?");
@@ -30,11 +33,34 @@ public class VehicleInventory {
         System.out.println(" 6 - Quit");
         System.out.println("Enter your command: ");
 
-        int answer = userInput.nextInt();
+        int choice = userInput.nextInt();
+        userInput.nextLine();
 
-        switch (answer){
+        switch(choice) {
+            case 1:
+                System.out.println("You choose option 1");
+                break;
+
             case 2:
-                findVehicleByPrice();
+                System.out.println("You choose option 2");
+                break;
+            case 3:
+                System.out.println("You choose option 3");
+                break;
+            case 4:
+                System.out.println("You choose option 4");
+                break;
+            case 5:
+                System.out.println("You choose option 5");
+                break;
+            case 6:
+                System.out.println("Goodbye");
+                exit = true;
+
+                default:
+                System.out.println("Invalid choice, try again");
+                break;
+        }
         }
     }
 
